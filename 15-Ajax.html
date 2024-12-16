@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX JAVASCRIPT</title>
+</head>
+<body>
+    <button id="loadData">load data</button>
+    <div id="result"></div>
+
+    <script>
+        //learning ajax
+        const dataBtn = document.getElementById("loadData")
+        dataBtn.addEventListener('click',() => {
+        //create a new XMLHTTpRequest;
+        let xhr = new XMLHttpRequest;
+
+        //configure the request;
+        xhr.open('GET', 'https://bible-api.com/?random=verse',true);
+
+        //set a callback to handle the request
+        xhr.onreadystatechange = function () {
+            if(xhr.readyState === 4) { // 4 means is done 
+                if(xhr.status === 200) {// 200 means that request is sucessfull
+
+                //parse thr JSON response;
+                let response = JSON.parse(xhr.responseText);
+
+                //display the request on the web page
+                document.getElementById('result').innerText = JSON.stringify(response, null,2);
+            } else {
+                //handle the error;
+                document.getElementById('result').innerHTML = "Error" + xhr.status
+            }
+          }
+        };
+        // send the request;
+        xhr.send();
+        })
+
+
+    </script>
+</body>
+</html>

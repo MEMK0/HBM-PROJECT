@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javaScript Functions</title>
+</head>
+<body>
+    
+
+    <script>
+       //syntax for functions
+       function myFunction(){
+        let result = 2+2
+        console.log(result);
+       }
+
+       //calling the function;
+       myFunction();
+
+       alert();
+       prompt();
+       isNaN();
+       let age = '40';
+       console.log(isNaN(age));
+
+       //functions with parameters
+       function calculateNumbers (n1,n2,n3,n4) {
+        let total = n1 + n2+ n3+ n4;
+        console.log(total);
+        return total;
+       }
+
+       calculateNumbers(2, 4, 6, 8);
+
+       function greetUser(user) {
+            alert(`hello,Good Morning ${user}`);
+       }
+
+       greetUser('Maureen');
+    </script>
+</body>
+</html>

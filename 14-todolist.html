@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <style>
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+            column-gap: 30px;
+        }
+        input[type="text"] {
+            width: 200px;
+            border-radius: 10px;
+            outline: none;
+            border: 1px solid lightslategray;
+            padding: 5px;
+        }
+        input[type="date"] {
+            width: 200px;
+            border-radius: 10px;
+            outline: none;
+            border: 1px solid lightslategray;
+            padding: 5px;
+        }
+        #add-todo-btn {
+            background-color: greenyellow;
+            color: navy;
+            width: 100px;
+            padding: 5px;
+            border: none;
+            border-radius: 7px;
+        }
+        .todo-items {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+            column-gap: 30px;
+            text-align: start;
+            margin-top: 10px;
+            padding: 10px;
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            border-bottom-color: lightblue;
+            border-radius: 30px;
+
+        }
+
+        .delete-btn {
+            background-color: rgb(203, 21, 21);
+            border: none;
+            color: azure;
+            border-radius: 5px;
+            font-size: small;
+            padding: 5px;
+            cursor: pointer;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+         <input type="text" placeholder="Enter your to-do" id="todoInput">
+        <input type="date" id="do-date">
+        <button id="add-todo-btn">Add to do</button>
+    </div>
+    <div id="output"></div>
+    
+    <script src="SCRIPTS.JS/14-todolilst.js"></script>
+</body>
+</html>

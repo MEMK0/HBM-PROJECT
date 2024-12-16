@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booleans and If Statements</title>
+</head>
+<body>
+
+    > greater than <br>
+    < less than <br>
+    >= greater than or equal to <br>
+    <= less than or equal to <br>
+    = assignment operator <br>
+    === strict equality <br>
+    != not operator or not equal to <br>
+    ? tenary operator <br>
+    && AND operator <br>
+    || The OR operator <br>
+
+    
+
+    <script>
+          // if(if condition/boolean){the body of the condition or if statements};
+        // else if (condition/boolean /when the if dosent work /when the if turns out to be false){the body of the else if statement};
+        // else {the program to run when the if and else if turns out to be false};
+
+        // let number1 = 30;
+        // let number2 = 10;
+        // if(number1>number2){console.log("true")};
+
+        // if(number1 < number2){console.log("number 1 is less than number 2")}
+        // else if(number1 > number2){console.log("number 1 is greater than number 2")}
+        // else {console.log("number 1 and 2 are likely equal")};
+
+        // let number3 = 30;
+        // let number4 = 30;
+        // if(number3>number4){console.log("true")};
+
+        // if(number3 < number4){console.log("number 3 is less than number 4")}
+        // else if(number3 > number4){console.log("number 3 is greater than number 4")}
+        // else {console.log("number 3 and 4 are likely equal")};
+
+
+        const requiedAge = 70;
+        const requiredTown = "kerang";
+
+        const userAge = Number(prompt("What is your age"));
+        const userTown = String(prompt("Enter your town"));
+
+        if(typeof userAge === 'number') {
+            if(userAge >= requiedAge && userTown === requiredTown.toLowerCase()) {
+                let accountNo = Number(prompt("Enter account number"));
+                if(!isNaN(accountNo) && (accountNo.toString().length === 10) ) {
+                    let bankName = String(prompt("Enter bank name"));
+                    alert(`${bankName} with the account number ${accountNo} has been credited with #50000`);
+                } else {
+                    alert("Invalid account number")
+                }
+            } else if (userAge < requiedAge || userTown != requiredTown.toLowerCase()) {
+                alert("You did not meet either of the conditions");
+            } else {
+                alert("Invalid input");
+            }
+        } else {
+            alert("Invalid input"); 
+        }
+        
+        
+    </script>
+</body>
+</html>
